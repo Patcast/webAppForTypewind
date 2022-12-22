@@ -20,12 +20,20 @@ $lesson = 0;
 
 <section>
     <div class="card lessonCard">
-    <?php if (! empty($exercises) && is_array($exercises)):$lesson = 0; ?>
+    <?php
+
+    if (! empty($exercises) && is_array($exercises)):$lesson = 0; ?>
+
         <?php foreach ($exercises as $exercise_item): ?>
-            <?php if ($exercise_item->lesson != $lesson) {
-                echo '<section id=Lesson'.$exercise_item->lesson. '>'. "<h2>". "Lesson ".$exercise_item->lesson. "</h2>". "</section>"; }
+            <?php if ($exercise_item->lesson != $lesson) {?>
+
+        </div>
+        <div class="card lessonCard">
+
+        <?php echo '<section id=Lesson'.$exercise_item->lesson. '>'. "<h2>". "Lesson ".$exercise_item->lesson. "</h2>". "</section>"; }
             $lesson = $exercise_item->lesson; ?>
             <h4 class="exerciseField"><?= esc($exercise_item->name); ?></h4>
+
         <?php endforeach ?>
     <?php else: ?>
         <h3>No Exercises</h3>
