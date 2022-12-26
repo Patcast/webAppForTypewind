@@ -32,7 +32,7 @@
             <li class="studentListItem">
                 <a href="<?php echo base_url('experts/studentOverview/'.$person->idStudents);?>">
                     <div class="roundProfilePic">
-                        <img src="/public/assets/icons/user.svg" alt="User Icon">
+                        <img src="/public/assets/avatars/1.svg" alt="User Icon">
                     </div>
                     <h4><?=$person->firstname?><br><?=$person->lastname?></h4>
                 </a>

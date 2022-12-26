@@ -5,7 +5,7 @@
     <h1>My Profile</h1>
     <div class="center">
         <div class="roundProfilePic">
-            <img src="/public/assets/icons/user.svg" alt="User Icon">
+            <img src="/public/assets/avatars/teacher.svg" alt="User Icon">
         </div>
         <h2>
             <?php $session = session();

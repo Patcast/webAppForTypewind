@@ -9,7 +9,7 @@ function filterStudents(array, name) {
         html="";
         for (var i = 0; i < array.length; i++) {
             html= html+ "<li class=\"studentListItem\"> <a href= \"" + URL + array[i].idStudents  +"\">"
-                + " <img src=\"/public/assets/icons/user.svg\" alt=\"User Icon\" class=\"roundProfilePic\">" +
+                + " <img src=\"/public/assets/avatars/1.svg\" alt=\"User Icon\" class=\"roundProfilePic\">" +
                 " <h4>" +array[i].firstname + "<br>" + array[i].lastname +"</h4>"+"</a></li>"
         }
     }
@@ -18,7 +18,7 @@ function filterStudents(array, name) {
         html="";
         for (var i = 0; i < result.length; i++) {
             html= html+ "<li class=\"studentListItem\"> <a href= \"" + URL + result[i].idStudents  +"\">"
-                + " <img src=\"/public/assets/icons/user.svg\" alt=\"User Icon\" class=\"roundProfilePic\">" +
+                + " <img src=\"/public/assets/avatars/1.svg\" alt=\"User Icon\" class=\"roundProfilePic\">" +
                 " <h4>" +result[i].firstname + "<br>" + result[i].lastname +"</h4>"+"</a></li>"
         }
     }
