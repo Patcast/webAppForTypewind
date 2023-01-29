@@ -42,7 +42,6 @@
                     <?php endif;?>
                     <div class="general">
                         <h3 class="one2">General Information</h3>
-                        <input type="hidden" id="password" name="password" value="<?=$person->password?>">
                         <input type="hidden" id="coins" name="coins" value=<?=$person->coins?>>
 
 

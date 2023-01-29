@@ -25,7 +25,7 @@ class Students_model extends Model {
     }
 
     public function get_students() {
-        $query_text = 'SELECT students.idStudents, students.firstname, students.lastname, students.password, students.email, students.gender, students.birthday
+        $query_text = 'SELECT students.idStudents, students.firstname, students.lastname, students.email, students.gender, students.birthday
 ,students.handSelection, students.isActive, students.notes, students.coins
 , teachers.firstname as teacherFirstname, teachers.lastname as teacherLastname, teachers.email as teacherEmail
 , teachers.password as teacherPassword FROM a22ux02.students 
