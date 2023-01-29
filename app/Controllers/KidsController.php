@@ -10,8 +10,6 @@ use App\Models\Menu_model;
 class KidsController extends BaseController
 {
 
-
-
     /// CSS FILES *********************
     private  array $commonCssFiles = array("components/main.css", "components/generalComponents.css", "components/menubar.css", "components/child_components_varia.css");
     private array $home = array("kids/home_child.css");
@@ -145,7 +143,6 @@ class KidsController extends BaseController
 
             $this->data['idStudentFk'] = $_POST['idStudentFk'];
             $this->data['idExerciseFk'] = $_POST['idExerciseFk'];
-//        $this->data['score'] = $_POST['score'];
             $this->data['score'] = $_POST['score'];
 
             $this->data['date'] = $_POST['date'];

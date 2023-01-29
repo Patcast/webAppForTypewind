@@ -20,7 +20,7 @@
                 <span class="coin"><?=(!empty(session()->coins))? session()->coins:0;?></span>
             </div>
 
-            <div class="card avatarCard">
+              <div class="card avatarCard">
             <?php if (! empty($avatars) && is_array($avatars)):
                 foreach ($avatars as $avatar):?>
                     <div class="<?= $avatar['classCSS']?> " id =<?= $avatar['idAvatars']?> >
