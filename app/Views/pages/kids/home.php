@@ -54,8 +54,8 @@
         endforeach;
             if($found ==1): ?>
                 <div class="card_home_child">
-                    <h3 class="three"> Congratulations!</h3>
-                    <h3 class="three"> You finished the game</h3>
+                    <h3> Congratulations!</h3>
+                    <h3> You finished the game</h3>
             <?php endif;?>
     <!--    </div>-->
     </div>

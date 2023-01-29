@@ -745,7 +745,7 @@ link.forEach(el => {
         if(getCookie("currentPage")=== "studentHome")
         {
             var theOne = studentHomeData[attr];
-            switchLang('Custom','Aangepast');
+            switchLang('Custom exercises','Aangepaste oefeningen');
             switchLang('Congratulations','Proficiat');
             switchLang('You finished the game','Je hebt het spel uitgespeeld');
         }
@@ -955,7 +955,6 @@ if(getCookie("englishActive")==="activeLang") {
     confirmMessage = "Confirm your purchase of this avatar";
     confirmText = "Confirm"
     cancelText = "Cancel"
-
 }
 
 $("document").ready(function() {
