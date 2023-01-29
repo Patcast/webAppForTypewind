@@ -164,13 +164,14 @@ const onClickNotBought = e => {
                     console.log('Success:', data);
                     const avatarIcon = document.getElementById(res.idOfAvatar);
                     el.removeEventListener("click", onClickNotBought);
-
-                    avatarIcon.classList.replace('noFireWorks', 'fireWorks');
-                    await delay(1000);
                     const currentCoins =  document.getElementById("currentCoins");
                     const finalCoins = (currentCoins.querySelector('.coin').textContent - avatarIcon.querySelector('.coin').textContent).toString();
                     currentCoins.querySelector('.coin').textContent= finalCoins;
                     document.getElementById("menuHeader").querySelector('.coin').textContent = finalCoins;
+
+                    avatarIcon.classList.replace('noFireWorks', 'fireWorks');
+                    await delay(1000);
+
                     avatarIcon.classList.replace('locked', 'bought');
                     avatarIcon.querySelector('.coin').textContent= (getCookie('nederlandsActief') === "notActive") ? "Purchased" : "Aangekocht";
                     await delay(1000);
