@@ -20,7 +20,7 @@
         <?php endif; ?>
     </div >
     <div  class="menuFooter">
-        <a href="<?=base_url()?>/registration/welcome" title="Go home">
+        <a href="<?=base_url()?>/registration/welcome">
             <img src="<?=base_url()?>/public/assets/icons/log_out_icon.svg" alt="logout">
             <p class="logout">Log out</p>
         </a>
