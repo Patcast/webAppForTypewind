@@ -171,9 +171,7 @@ div.bought span.coin {
     padding: 0.625rem 1.25rem;
 }
 
-/*div.bought:hover > span.coin {*/
-/*    background-color: var(--accentColor);*/
-/*}*/
+
 
 div.noMoney:hover span.errorMessage {
     visibility: visible;
@@ -236,9 +234,3 @@ div.noMoney:not(div.noEffects):hover {
     }
 }
 
-/*@media screen and (max-height: 50em) {*/
-/*    div.avatarCard {*/
-/*        row-gap: 0.625rem;*/
-/*        padding: 1.25rem 1.25rem;*/
-/*    }*/
-/*}*/
