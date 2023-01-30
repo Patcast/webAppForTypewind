@@ -799,18 +799,6 @@ link.forEach(el => {
             switchLang('Selected','Gekozen');
             switchLang('Not enough coins','Niet genoeg munten');
 
-            //dialog in avatar page
-            let confirmMessage="Confirm";
-            if(getCookie("nederlandsActief")==="activeLang"){
-                confirmMessage ="Bevestig je aankoop van deze avatar";
-                confirmText = "Bevestig"
-                cancelText = "Annuleer"
-            }
-            if(getCookie("englishActive")==="activeLang") {
-                confirmMessage = "Confirm your purchase of this avatar";
-                confirmText = "Confirm"
-                cancelText = "Cancel"
-            }
         }
 
         switchLang('Avatar shop','Avatar winkel');
@@ -943,19 +931,6 @@ link.forEach(el => {
             profileEl.textContent = mainData[attr].Profile;
     });
 });
-
-//dialog in avatar page
-let confirmMessage="Confirm";
-if(getCookie("nederlandsActief")==="activeLang"){
-    confirmMessage ="Bevestig je aankoop van deze avatar";
-    confirmText = "Bevestig"
-    cancelText = "Annuleer"
-}
-if(getCookie("englishActive")==="activeLang") {
-    confirmMessage = "Confirm your purchase of this avatar";
-    confirmText = "Confirm"
-    cancelText = "Cancel"
-}
 
 $("document").ready(function() {
     document. getElementById('activeLang').click();
