@@ -1,5 +1,5 @@
-
 class Dialog {
+
     constructor(settings = {}) {
         this.settings = Object.assign(
             {
@@ -125,7 +125,6 @@ class Dialog {
 
 
 const dialog = new Dialog();
-
 
 const onClickNotBought = e => {
     const el = e.currentTarget;

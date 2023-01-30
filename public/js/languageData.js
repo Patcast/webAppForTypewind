@@ -799,18 +799,6 @@ link.forEach(el => {
             switchLang('Selected','Gekozen');
             switchLang('Not enough coins','Niet genoeg munten');
 
-            //dialog in avatar page
-            let confirmMessage="Confirm";
-            if(getCookie("nederlandsActief")==="activeLang"){
-                confirmMessage ="Bevestig je aankoop van deze avatar";
-                confirmText = "Bevestig"
-                cancelText = "Annuleer"
-            }
-            if(getCookie("englishActive")==="activeLang") {
-                confirmMessage = "Confirm your purchase of this avatar";
-                confirmText = "Confirm"
-                cancelText = "Cancel"
-            }
         }
 
         switchLang('Avatar shop','Avatar winkel');
@@ -835,9 +823,14 @@ link.forEach(el => {
                 }
             }
         }
+        if(getCookie("currentPage")=== "expertStudent")
+            var theOne = expertStudentData[attr];
 
         if(getCookie("currentPage")=== "expertStudents"){
             var theOne = expertStudentsData[attr];
+
+            switchLang('Add new student','Nieuwe student toevoegen')
+            switchLang('Teacher','Leerkracht')
 
             if(attr === 'english') {
                 document.getElementById("myInput").placeholder='Search';
@@ -877,8 +870,6 @@ link.forEach(el => {
             var theOne = studentIntroData[attr];
         if(getCookie("currentPage")=== "expertEditExercise")
             var theOne = expertEditExerciseData[attr];
-        if(getCookie("currentPage")=== "expertStudent")
-            var theOne = expertStudentData[attr];
         if(getCookie("currentPage")=== "expertProfile")
             var theOne = expertProfileData[attr];
         if(getCookie("currentPage")=== "expertHome")
@@ -944,19 +935,17 @@ link.forEach(el => {
     });
 });
 
-//dialog in avatar page
-let confirmMessage="Confirm";
+let confirmMessage="Confirm your purchase of this avatar";
+let confirmText="Confirm";
+let cancelText="Cancel";
+
 if(getCookie("nederlandsActief")==="activeLang"){
     confirmMessage ="Bevestig je aankoop van deze avatar";
     confirmText = "Bevestig"
     cancelText = "Annuleer"
 }
-if(getCookie("englishActive")==="activeLang") {
-    confirmMessage = "Confirm your purchase of this avatar";
-    confirmText = "Confirm"
-    cancelText = "Cancel"
-}
 
 $("document").ready(function() {
+    if(!document.getElementById('activeLang')){location.reload()}
     document. getElementById('activeLang').click();
 });
