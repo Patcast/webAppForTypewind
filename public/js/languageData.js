@@ -829,6 +829,9 @@ link.forEach(el => {
         if(getCookie("currentPage")=== "expertStudents"){
             var theOne = expertStudentsData[attr];
 
+            switchLang('Add new student','Nieuwe student toevoegen')
+            switchLang('Teacher','Leerkracht')
+
             if(attr === 'english') {
                 document.getElementById("myInput").placeholder='Search';
             }

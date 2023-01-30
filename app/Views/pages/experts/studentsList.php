@@ -7,17 +7,15 @@
     <h1 class="one" >Students</h1>
     <div class="bar">
         <!-- Add new student -->
-        <a class="addNew" href=<?php echo base_url('experts/addStudentPage/');?>>Student</a>
+        <a class="addNew" href=<?php echo base_url('experts/addStudentPage/');?>>Add new student</a>
 
         <input type="hidden" id="URL" name="URL" value="<?php echo base_url();?>/experts/studentOverview/">
-
-
 
         <div class="rightBar">
             <!-- Filter -->
             <div class="filterContainer">
                 <select name="Filter" id="filter" onchange="filterStudents(users, this.value)">
-                    <option disabled selected value="Filter" hidden>Filter</option>
+                    <option disabled selected value="Filter" hidden>Teacher</option>
                     <?php foreach ($teachers as $teacher):
                         if($teacher->isActive):?>
 
