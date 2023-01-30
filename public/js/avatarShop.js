@@ -1,13 +1,3 @@
-let confirmMessage="Confirm your purchase of this avatar";
-let confirmText="Confirm";
-let cancelText="Cancel";
-
-if(getCookie("nederlandsActief")==="activeLang"){
-    confirmMessage ="Bevestig je aankoop van deze avatar";
-    confirmText = "Bevestig"
-    cancelText = "Annuleer"
-}
-
 class Dialog {
 
     constructor(settings = {}) {

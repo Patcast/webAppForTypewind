@@ -932,6 +932,17 @@ link.forEach(el => {
     });
 });
 
+let confirmMessage="Confirm your purchase of this avatar";
+let confirmText="Confirm";
+let cancelText="Cancel";
+
+if(getCookie("nederlandsActief")==="activeLang"){
+    confirmMessage ="Bevestig je aankoop van deze avatar";
+    confirmText = "Bevestig"
+    cancelText = "Annuleer"
+}
+
 $("document").ready(function() {
+    if(!document.getElementById('activeLang')){location.reload()}
     document. getElementById('activeLang').click();
 });
