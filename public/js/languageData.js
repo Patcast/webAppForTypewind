@@ -823,6 +823,8 @@ link.forEach(el => {
                 }
             }
         }
+        if(getCookie("currentPage")=== "expertStudent")
+            var theOne = expertStudentData[attr];
 
         if(getCookie("currentPage")=== "expertStudents"){
             var theOne = expertStudentsData[attr];
@@ -865,8 +867,6 @@ link.forEach(el => {
             var theOne = studentIntroData[attr];
         if(getCookie("currentPage")=== "expertEditExercise")
             var theOne = expertEditExerciseData[attr];
-        if(getCookie("currentPage")=== "expertStudent")
-            var theOne = expertStudentData[attr];
         if(getCookie("currentPage")=== "expertProfile")
             var theOne = expertProfileData[attr];
         if(getCookie("currentPage")=== "expertHome")
