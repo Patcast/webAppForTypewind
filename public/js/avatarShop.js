@@ -5,7 +5,7 @@ class Dialog {
             {
                 accept: 'OK',
                 bodyClass: 'dialog-open',
-                cancel: cancelText,
+                cancel: (cancelText==undefined)?"Cancel":cancelText,
                 dialogClass: '',
                 message: '',
                 template: '',
