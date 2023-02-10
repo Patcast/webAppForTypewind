@@ -1,0 +1,103 @@
+/* Implementation Grid */
+.grid-container_intro {
+
+    display: grid;
+    /*grid-template-columns: 3fr 4fr 3fr;*/
+    /*grid-template-rows: 0.5fr 1fr 8fr;*/
+    margin: 2.831rem 3.75rem 3.75rem;
+}
+/* CARD */
+.grid_cards{
+    /*
+    transform: scale(0.90);
+    */
+    /*grid-column: 2  / span 1;*/
+    /*grid-row: 3/span 1;*/
+    place-self: center;
+    /*justify-self: stretch;*/
+    text-align: center;
+    margin-top: 1.25rem;
+}
+.card_intro {
+    background-color: var(--beigeNeutral-light);
+    border-radius: 1.563rem; /* 25px */
+    box-shadow: 0.5rem 0.5rem 1.25rem rgba(30, 41, 41, 0.2); /* 8px 8px 20px */
+    border: 0.125rem solid var(--beigeNeutral-dark); /* 2px */
+    padding: 2.5rem;
+    margin: 0.625rem; /* 10px */
+    align-items: center;
+}
+.switches{
+    text-align: left;
+    margin-left: 0.9375rem;
+}
+.breadcrumb{
+    /*grid-column: 1  / span 3;*/
+    /*grid-row: 1/span 1;*/
+}
+.title{
+    /*grid-column: 1  / span 3;*/
+    /*grid-row: 2/span 1;*/
+}
+/* BUTTON */
+.intro_ex_button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.intro_ex_button button{
+    width: 100%;
+    margin: 0.75rem;
+}
+/* SWITCH */
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 3.438rem; /* 55px */
+    height: 1.5rem; /* 24px */
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    border-radius: 0.75rem; /* 12px */
+    box-shadow: inset 0 0.25rem 0.25rem rgba(30, 41, 41, 0.25); /* 4px 4px --black = rgb(30,41,41) */
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--blueNeutral-lightest);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    border-radius: 50%;
+    box-shadow: 0 0.25rem 0.25rem rgba(30, 41, 41, 0.25); /* 4px 4px*/
+    position: absolute;
+    content: "";
+    height: 1.125rem; /* 18px */
+    width: 1.125rem; /* 18px */
+    left: 0.188rem; /* 3px */
+    bottom: 0.188rem; /* 3px */
+    background-color: var(--beigeNeutral);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: var(--primary-dark);
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(1.938rem); /* 31px */
+    -ms-transform: translateX(1.938rem); /* 31px */
+    transform: translateX(1.938rem); /* 31px */
+}

@@ -1,0 +1,194 @@
+.menu_grid-container {
+    display: grid;
+    height: 95vh;
+    width: 15.625rem;
+    font: var(--navText);
+    color: var(--blueNeutral);
+
+    justify-content: stretch;
+    grid-template-areas:'.' 'header' 'subHeader''.''item''item''item''item''item''item''item' 'item'   '.''.' '.''.' 'footer''footer' '.';
+
+}
+.menu_grid-container p{
+    font: var(--navText);
+    color: var(--blueNeutral);
+}
+
+.menuHeader {
+    grid-area: header;
+    justify-self:center;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    gap: 0.625rem;
+}
+
+.menuHeader div.roundProfilePic {
+    height: 7.5rem; /* 120px */
+    width: 7.5rem; /* 120px */
+    border-width: 0.25rem; /* 4px */
+}
+
+.menuHeader div.roundProfilePic img {
+    height: 4.063rem; /* 65px */
+    width: auto;
+}
+
+.menuHeader {
+    height: fit-content;
+}
+
+#typewindLogo {
+    width: 11.25rem;
+    height: auto;
+}
+
+.menuSubHeader{
+    grid-area: subHeader;
+    padding-right: 1.563rem;
+    padding-left: 0.938rem;
+}
+
+.menuItems {
+    grid-area: item;
+    display: flex;
+    flex-direction: column;
+
+}
+.menuItems img {
+    padding-left: 2.438rem;
+    margin-right: 0.938rem;
+}
+
+.menuItems a {
+    text-decoration: none;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+.menuFooter {
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+}
+
+.menuFooter img {
+    padding-left: 2.438rem;
+    margin-right: 0.938rem;
+}
+
+.menuFooter a {
+    text-decoration: none;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.menu_grid-container a {
+    font: var(--navText);
+    color: var(--blueNeutral);
+    text-decoration: none;
+    text-align: start;
+}
+
+.menuItems a:not(a.activeItem):hover  p{
+    font: var(--navEmphasisText);
+    color: var(--blueNeutral-dark);
+}
+
+.activeItem {
+    color: var(--blueNeutral-dark);
+    background-color: var(--beigeNeutral);
+    border-radius: 4.063rem 0 0 4.063rem;
+    z-index: 10;
+}
+.menu_grid-container a:hover {
+    font: var(--navEmphasisText);
+    color: var(--blueNeutral-dark);
+}
+
+.menu_grid-container .active  {
+    font: var(--navEmphasisText);
+    color: var(--blueNeutral-dark);
+}
+
+.menu_grid-container a:active {
+    font: var(--navEmphasisText);
+    color: var(--blueNeutral-dark);
+}
+
+@media only screen and (max-width: 87.5em) {
+
+    .menuSubHeader{
+        padding-right: 0;
+        padding-left:0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+
+    }
+
+    #typewindLogo{
+        width: 2.5rem;
+        height: auto;
+        content: url("/public/assets/general/typwind-icon.svg");
+    }
+
+    .menuHeader div.roundProfilePic {
+        height: 5.625rem; /* 95px */
+        width: 5.625rem; /* 95px */
+    }
+
+    .menuHeader div.roundProfilePic img {
+        height: 3.125rem; /* 50px */
+        width: auto;
+    }
+
+    .menuHeader span.coin {
+        min-width: 5.625rem; /* 95px */
+        padding: 0.5rem 0.938rem;
+    }
+
+    .menuHeader span.coin:before {
+        padding-right: 0.313rem !important;
+        display: none !important;
+    }
+
+    .menuItems  p {
+       display: none;
+    }
+
+    .menuItems  a {
+        justify-content: center;
+
+    }
+
+    .menuItems img {
+        padding-left: 0;
+        margin-right: 0;
+    }
+    .menuFooter p {
+        display: none;
+    }
+    .menuFooter  a {
+        justify-content: center;
+    }
+    .menuFooter  img {
+        padding-left: 0;
+        margin-right: 0;
+    }
+
+    .menu_grid-container {
+        width: 7.5rem;
+        justify-items: stretch;
+    }
+
+    span.bar {
+        display: none;
+    }
+}
+
+

@@ -1,0 +1,76 @@
+.grid-container_feedback{
+    display: grid;
+    grid-template-columns: 3fr 4fr 3fr;
+    grid-template-rows: 0.5fr 1fr 8fr;
+    margin: 3.125rem;
+    height: 100%;
+}
+.breadcrumb{
+    grid-column: 1  / span 3;
+    grid-row: 1/span 1;
+}
+.title{
+    grid-column: 1  / span 3;
+    grid-row: 2/span 1;
+}
+.content_feedback{
+    grid-column: 2  / span 1;
+    grid-row: 3/span 1;
+    justify-self: center;
+    text-align: center;
+}
+/*Star icons*/
+.wrapper_for_stars {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+    margin: 1.25rem 0 2.5rem 0;
+    /*border: 0.0625rem solid black;*/
+}
+
+.checked_stars {
+    content: url(/public/assets/icons/fi-sr-star.svg);
+    display: inline-block;
+    animation: wiggle 2s ;
+}
+.unchecked_stars {
+    content: url(/public/assets/icons/fi-br-star.svg);
+    display: inline-block;
+    animation: wiggle 2s ;
+}
+/* BUTTON */
+.card_buttons{
+    background-color: var(--beigeNeutral-light);
+    border-radius: 1.563rem; /* 25px */
+    box-shadow: 0.5rem 0.5rem 1.25rem rgba(30, 41, 41, 0.2); /* 8px 8px 20px */
+    padding: 2.5rem;
+    border: 0.125rem solid var(--beigeNeutral-dark); /* 2px */
+    max-width: 31.25rem;
+    margin: 2.5rem auto auto;
+}
+
+.feedback_ex_button button{
+    width: 21.875rem;
+    margin: 0.75rem;
+}
+.feedback_ex_button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h3.eleven, h3.twelve {
+    width: max-content;
+    margin: auto;
+}
+
+/*Wiggle stars*/
+@keyframes wiggle {
+    0% {transform: rotate(10deg);}
+    25% {transform: rotate(-10deg);}
+    50% {transform: rotate(20deg);}
+    75% {transform: rotate(-5deg);}
+    100% {transform: rotate(0deg);}
+}
+

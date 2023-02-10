@@ -1,0 +1,48 @@
+h3 {
+    color: var(--secondaryColor);
+    margin: 1.25rem 0 0.938rem; /*20px 0 15px*/
+}
+
+p {
+    font: var(--bodyText);
+    text-align: left;
+    display: inline-block;
+    line-height: 2.5rem; /*40px*/
+}
+
+div.bottomBar a {
+    text-decoration: none;
+}
+
+.button {
+    max-width: 9.375rem; /*150px*/
+}
+
+.mainContent {
+    position: relative;
+    padding-top: 2.813rem; /*45px*/
+}
+
+h1 {
+    margin-left: 3.75rem; /*60px*/
+    margin-bottom: 1.25rem; /*20px*/
+}
+
+div.center {
+    text-align: center;
+}
+
+div.left {
+    text-align: left;
+}
+
+div.roundProfilePic {
+    margin: auto;
+    height: 8.125rem; /* 130px */
+    width: 8.125rem; /* 130px */
+}
+
+div.roundProfilePic img {
+    height: 3.75rem; /* 60px */
+    width: auto;
+}

@@ -1,0 +1,71 @@
+.mainContent {
+    padding: 2.813rem 1.875rem 3.75rem 3.75rem; /*45px 30px 60px 60px*/
+}
+
+h1 {
+    /*margin-bottom: 2.5rem; !*40px*!*/
+}
+
+div.exerciseContainer {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.875rem; /*30px*/
+    height: 90%;
+    overflow: auto;
+    align-items: center;
+    padding-right: 2.188rem; /*35px*/
+    padding-bottom: 1.875rem; /*30px*/
+}
+
+@media screen and (max-width: 112.5em) {
+    div.lessonCard {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: "header header header header";
+    }
+}
+
+@media screen and (max-width: 93.75em) {
+    div.lessonCard {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "header header header";
+    }
+}
+
+@media screen and (max-width: 78.125em) {
+    div.lessonCard {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "header header";
+    }
+}
+
+.addNew{
+    font: var(--navText);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.875rem;
+    margin-top: 0.5rem;
+}
+a{
+    text-decoration: none;
+}
+/*.addNew::before{*/
+/*    content: url("/public/assets/icons/add.svg");*/
+/*    vertical-align: middle;*/
+/*    padding-right: 0.625rem; !*10px*!*/
+/*    background-size: 2.188rem auto;*/
+
+/*}*/
+.addNew:hover {
+    color: var(--accentColor);
+    transition-duration: 0.4s;
+}
+
+.addNew::before{
+    content: "";
+    background: url("/public/assets/icons/add.svg") no-repeat center;
+    background-size: 2.188rem auto;
+    padding: 1.094rem 0 1.094rem 2.188rem;
+    margin-right: 0.625rem;
+    /*margin-top: 2.5rem;*/
+}

@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: var(--blueNeutral);
+    user-select: none;
+}
+
+:root {
+    /* Colors Styles */
+    --primary-darkest: #0A6274;
+    --primary-dark: #12908E;
+    --primaryColor: #A6DCDE;
+    --primary-light: #C1EAEC;
+    --primary-lightest: #CEF2F3;
+
+    --secondary-darkest: #DE1E00;
+    --secondary-dark: #FC482C;
+    --secondaryColor: #F37460;
+    --secondary-light: #F4A684;
+    --secondary-lightest: #FFC6AE;
+
+    --accentColor: #FAA330;
+    --accent-light: #FFBD65;
+
+    --blueNeutral-dark: #021F2E;
+    --blueNeutral: #023047;
+    --blueNeutral-light: #5F8090;
+    --blueNeutral-lightest: #B8C7CE;
+    --beigeNeutral-dark: #EADBD5;
+    --beigeNeutral: #FFF7F3;
+    --beigeNeutral-light: #FFFCFB;
+
+    --black: #1E2929;
+    --darkGray: #383F40;
+    --mediumGray: #6C6E6F;
+    --lightGray: #AFAFAF;
+    --lightestGray: #D9DEDE;
+    --white: #F4FAFA;
+
+    /* Fonts */
+    --opensans-font: "Open Sans", sans-serif;
+    --andika-font: "Andika", sans-serif;
+
+    /* TEXT STYLES
+     *
+     * Small text = --smallText
+     * Body text = --bodyText
+     * Body explanatory text = --bodyExText
+     * Emphasis = .emphasisText
+     * Emphasis explanatory text = --emphasisExText
+     * Heading 3 = --heading3 = h4
+     * Heading 2 = --heading2 = h3
+     * Heading 1 = --heading1 = h2
+     * Title = --title = h1
+     * Subtitle = --subTitle
+     * Button label = --buttonLabel
+     * Navigation text = --navText
+     * Navigation emphasis text = --navEmphasisText
+     */
+    --smallText: italic 400 0.825rem var(--opensans-font); /* Style=italic, Weight=regular, Size=14pt, Family=Open Sans */
+    --bodyText: 400 1rem var(--opensans-font); /* Weight=regular, Size=16pt, Family=Open Sans */
+    --bodyExText: 400 1rem var(--andika-font); /* Weight=regular, Size=16pt, Family=Andika */
+    --emphasisText: 700 1rem var(--opensans-font); /* Weight=bold, Size=16pt, Family=Open Sans */
+    --emphasisExText: 700 1rem var(--andika-font); /* Weight=bold, Size=16pt, Family=Andika */
+    --heading3: 700 1.25rem var(--andika-font); /* Weight=bold, Size=20pt, Family=Andika */
+    --heading2: 700 1.625rem var(--andika-font); /* Weight=bold, Size=26pt, Family=Andika */
+    --heading1: 700 2.125rem var(--andika-font); /* Weight=bold, Size=34pt, Family=Andika */
+    --title: 700 3rem var(--andika-font); /* Weight=bold, Size=48pt, Family=Andika */
+    --subtitle: 400 2.125rem var(--andika-font); /* Weight=semibold, Size=34pt, Family=Andika */
+    --buttonLabel: 600 1.125rem var(--opensans-font); /* Weight=semibold, Size=18pt, Family=Open Sans */
+    --navText: 600 1.25rem var(--opensans-font); /* Weight=semibold, Size=20pt, Family=Open Sans */
+    --navEmphasisText: 700 1.25rem var(--opensans-font); /* Weight=bold, Size=20pt, Family=Open Sans */
+}
+
+/*html {*/
+/*    font-size: 90%;*/
+/*}*/
+
+h4 {
+    font: var(--heading3);
+}
+
+h3 {
+    font: var(--heading2);
+}
+
+h2 {
+    font: var(--heading1);
+}
+
+h1 {
+    font: var(--title);
+}
+
+.leftNavBar {
+    zoom: 0.95;
+    background-color: transparent;
+    text-align: center;
+    flex-shrink: 1;
+}
+.mainContent {
+    zoom: 0.95;
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.15);
+    background-color: var(--beigeNeutral);
+    border-radius: 1.563rem; /* 25px */
+    /*text-align: center;*/
+    /*height: 100%;*/
+    overflow: hidden;
+    flex-grow: 1;
+}
+.grid-container {
+    display: flex;
+    padding: 20px;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 100vh;
+
+    /*unselectable*/
+    -moz-user-select: none;
+    -webkit-user-select: none;/*Safari*/
+    -ms-user-select: none;/*Firefox*/
+
+}
+
+.active {
+    font-weight: bolder;
+}
+
+

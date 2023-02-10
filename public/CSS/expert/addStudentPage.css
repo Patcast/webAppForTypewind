@@ -1,0 +1,36 @@
+.studentContainer {
+    grid-template-columns: 100%;
+}
+
+div.infoContainer {
+    grid-column: 1;
+}
+
+div.infoContainer {
+    flex-direction: row;
+    column-gap: 4.375rem;
+}
+
+div.notes {
+    width: 70%;
+}
+
+span.mandatory {
+    font: var(--smallText);
+    color: var(--secondary-dark);
+    margin-top: 0.625rem;
+}
+
+.errorMessage #text {
+    color: var(--secondary-dark) !important;
+}
+
+@media screen and (max-width: 62.5em) {
+    div.infoContainer {
+        flex-direction: column;
+    }
+
+    div.notes {
+        width: 100%;
+    }
+}

@@ -1,0 +1,236 @@
+.mainContent {
+    padding: 2.813rem 1.875rem 1.875rem 3.75rem; /*45px 30px 30px 60px*/
+}
+
+span.errorMessage {
+    text-align: center;
+    visibility: hidden;
+    font: var(--emphasisText);
+}
+
+div.roundProfilePic {
+    border-width: 0.188rem;
+}
+
+div.currentPic {
+    grid-row: 1;
+    grid-column: 1;
+    height: 11.25rem; /* 180px */
+    width: 11.25rem; /* 180px */
+    align-self: end;
+}
+
+div.currentPic img {
+    height: 6.25rem; /* 100px */
+    width: auto;
+}
+
+div.coins {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    grid-row: 2;
+    grid-column: 1;
+    align-self: start;
+}
+
+div.avatarContent {
+    display: grid;
+    grid-template-columns: min-content auto;
+    grid-template-rows: 1fr 1fr;
+    gap: 2.5rem;
+    height: 90%;
+    padding-right: 1.875rem;
+    padding-bottom: 1.875rem;
+    overflow: auto;
+    margin-top: 0.625em;
+}
+div.noFireWorks > .pyro{
+    visibility: hidden;
+}
+div.fireWorks > .pyro{
+    visibility: visible;
+}
+
+div.avatarCard {
+    grid-column: 2;
+    grid-row: 1/span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    justify-items: center;
+    align-items: center;
+    row-gap: 1.875rem;
+    column-gap: 0.313rem;
+    height: fit-content;
+    margin: 1.875rem 0.625rem;
+    padding: 2.5rem 1.25rem;
+    align-self: center;
+}
+
+div.avatarChoice {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    width: max-content;
+    justify-items: center;
+    align-items: center;
+}
+
+div.avatarChoice div.roundProfilePic {
+    height: 8.438rem; /* 135px */
+    width: 8.438rem; /* 135px */
+    margin-top: 0.938rem;
+}
+
+div.avatarChoice div.roundProfilePic img {
+    height: 4.375rem; /* 70px */
+    width: auto;
+}
+
+div.avatarChoice span.coin {
+    min-width: 9.063rem;
+    text-align: center;
+    margin: 0 0.938rem 0.938rem;
+}
+
+div.avatarChoice:not(div.noEffects):not(div.noMoney):hover {
+    cursor: pointer;
+}
+
+div.avatarChoice:not(div.noEffects):hover > div.roundProfilePic {
+    box-shadow: 4px 4px 8px rgba(30, 41, 41, 0.45); /* --black = rgb(30,41,41)*/
+    transition-duration: 0.4s;
+    height: 9.375rem; /* 150px */
+    width: 9.375rem; /* 150px */
+    margin-top: 0;
+}
+
+div.avatarChoice:not(div.noEffects):hover > div.roundProfilePic > img {
+    height: 5.625rem; /* 80px */
+    width: auto;
+    transition-duration: 0.4s;
+}
+
+div.avatarChoice:not(div.noEffects):hover > span.coin {
+    box-shadow: 4px 4px 8px rgba(30, 41, 41, 0.45); /* --black = rgb(30,41,41)*/
+    transition-duration: 0.4s;
+    margin: 0;
+}
+
+div.avatarChoice:not(div.noEffects):not(div.noMoney):not(div.bought):hover > div.roundProfilePic {
+    border-color: var(--accentColor);
+}
+
+div.avatarChoice:not(div.noEffects):not(div.noMoney):active > div.roundProfilePic,  div.avatarChoice:not(div.noEffects):not(div.noMoney):active > span.coin {
+    box-shadow: 4px 4px 12px rgba(30, 41, 41, 0.7) inset;
+}
+
+div.locked div.roundProfilePic img {
+    filter: blur(0.438rem);
+    -webkit-filter: blur(0.438rem);
+}
+
+div.locked div.roundProfilePic {
+    border-color: var(--lightGray);
+}
+
+div.locked:not(div.noMoney):not(div.bought):hover > span.coin {
+    background-color: var(--accent-light);
+}
+
+div.locked:not(div.noMoney):hover > span.coin:before {
+    background-image: url("/public/assets/icons/coin.svg");
+    transition-duration: 0.4s;
+}
+
+div.locked div.roundProfilePic {
+    background-color: var(--lightestGray);
+}
+
+div.chosen span.coin {
+    background-color: var(--secondary-lightest);
+    padding: 0.625rem 1.25rem;
+}
+
+div.chosen span.coin:before, div.bought span.coin:before {
+    background-image: none;
+    padding: 0;
+    margin: 0;
+}
+
+div.bought div.roundProfilePic {
+    border-color: var(--primary-dark);
+}
+
+div.bought span.coin {
+    background-color: var(--primary-dark);
+    color: var(--beigeNeutral);
+    padding: 0.625rem 1.25rem;
+}
+
+
+
+div.noMoney:hover span.errorMessage {
+    visibility: visible;
+    transition-duration: 0.4s;
+}
+
+div.noMoney span.coin {
+    background-color: var(--lightestGray);
+    color: var(--mediumGray);
+}
+
+div.noMoney span.coin:before {
+    background-image: url("/public/assets/icons/coinGrey.svg");
+}
+
+div.noMoney:not(div.noEffects):hover {
+    cursor: not-allowed;
+}
+
+@media screen and (max-width: 112.5em) {
+
+    div.avatarChoice:not(div.bigPic) div.roundProfilePic {
+        height: 7.5rem; /* 120px */
+        width: 7.5rem; /* 120px */
+    }
+
+    div.avatarChoice:not(div.bigPic) div.roundProfilePic img {
+        height: 4.063rem; /* 65px */
+        width: auto;
+    }
+
+    div.avatarChoice span.coin {
+        padding: 0.313rem 1.875rem;
+        min-width: 8.125rem;
+    }
+
+    div.avatarChoice span.coin:before {
+        background-size: 1.125rem auto;
+        padding-left: 1.125rem;
+    }
+
+    div.avatarChoice:not(div.noEffects):not(div.bigPic):hover > div.roundProfilePic {
+        height: 8.75rem; /* 140px */
+        width: 8.75rem; /* 140px */
+    }
+
+    div.avatarChoice:not(div.noEffects):not(div.bigPic):hover > div.roundProfilePic > img {
+        height: 5rem; /* 80px */
+        width: auto;
+    }
+
+    div.chosen span.coin, div.bought span.coin {
+        min-width: 8.75rem;
+        padding: 0.313rem 0.313rem;
+    }
+
+    div.chosen span.coin:before, div.bought span.coin:before {
+        padding: 0;
+        margin: 0;
+    }
+}
+

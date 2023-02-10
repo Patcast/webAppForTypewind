@@ -130,6 +130,7 @@ p.lead {
 .tabs a.active {
     background: var(--main-bg-color);
     color: var(--main-text-color);
+
 }
 .tab-content {
     background: var(--main-bg-color);

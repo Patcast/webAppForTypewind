@@ -24,7 +24,8 @@ class App extends BaseConfig
      *
      * @var string
      */
-    public $baseURL = 'http://localhost:8080/';
+    ///to be deployed in studev.
+    public $baseURL = 'http://localhost:8080/typewind';
 
     /**
      * --------------------------------------------------------------------------
@@ -56,7 +57,7 @@ class App extends BaseConfig
      *
      * @var string
      */
-    public $uriProtocol = 'REQUEST_URI';
+    public $uriProtocol = 'PATH_INFO';
 
     /**
      * --------------------------------------------------------------------------

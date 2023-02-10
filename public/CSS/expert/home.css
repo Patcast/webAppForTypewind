@@ -1,0 +1,69 @@
+div.user h1 {
+    color: var(--primary-dark);
+    margin: 10px;
+    line-height: 2.9rem;
+}
+
+div.user p {
+    font: 700 4rem var(--andika-font); /* Weight=bold, Size=64pt, Family=Andika */
+    margin: 20px;
+    color: var(--blueNeutral);
+    line-height: 3.9rem;
+}
+
+div.user {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainContent {
+    position: relative;
+    overflow: hidden;
+
+    /* WAVE COMPONENT CODE */
+    background-image: url(/public/assets/general/wave.svg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 100%;
+    text-align: center;
+}
+
+div.roundProfilePic {
+    height: 9.375rem; /* 150px */
+    width: 9.375rem; /* 150px */
+}
+
+div.roundProfilePic img {
+    height: 5rem; /* 80px */
+}
+
+@media screen and (max-width: 68.75em) {
+    div.roundProfilePic {
+        height: 6.25rem; /* 100px */
+        width: 6.25rem; /* 100px */
+    }
+
+    div.roundProfilePic img {
+        height: 3.125rem; /* 50px */
+    }
+}
+
+@media screen and (max-height: 31.25em) {
+    div.user img.roundProfilePic {
+        display: none;
+    }
+
+    div.user h1 {
+        font-size: 2.5rem;
+    }
+
+    div.user p {
+        font-size: 3rem;
+    }
+}

@@ -1,0 +1,56 @@
+.separator-type, .title-type, .intro-type, .content-type .intro-type p {
+    position: relative;
+}
+.intro-type .container {
+    padding: 6.6875rem 0rem 6.375rem 0rem !important;
+}
+.company-heading h1 {
+    margin-bottom: 3.75rem;
+    padding-bottom: 3.125rem;
+    line-height: 5rem;
+    color: #fff;
+    font-weight: 700 !important;
+    text-align: center;
+}
+.jumbo {
+    margin-top: 3.125rem;
+}
+.seo-header, .product-header, .intro-type .container h1.white, .company-heading h1 {
+    font-weight: 100 !important;
+    text-transform: capitalize;
+    font-size: 3.4375rem;
+    margin-bottom: 1.25rem;
+}
+.parallax {
+    background-attachment: inherit !important;
+}
+.parallax {
+    background-attachment: inherit !important;
+}
+.parallax {
+    background-attachment: inherit !important;
+    background-repeat: repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0rem;
+    bottom: 0rem;
+    width: 100%;
+    z-index: -10;
+}
+.ct-btn-scroll {
+    width: 3.0625rem;
+    height: 3.0625rem;
+    position: absolute;
+    bottom: 1.875rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding-top: 31.25rem;
+    z-index: 9;
+    border-radius: 50%;
+    -webkit-transition: background-color 0.25s ease-in-out;
+    transition: background-color 0.25s ease-in-out;
+}
+img, figure {
+    max-width: 100%;
+}

@@ -17,8 +17,8 @@ if (is_file(SYSTEMPATH . 'Config/Routes.php')) {
  * --------------------------------------------------------------------
  */
 $routes->setDefaultNamespace('App\Controllers');
-$routes->setDefaultController('Home');
-$routes->setDefaultMethod('index');
+$routes->setDefaultController('RegistrationController');
+$routes->setDefaultMethod('welcome');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
 // The Auto Routing (Legacy) is very dangerous. It is easy to create vulnerable apps
@@ -35,27 +35,33 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
-$routes->get('pages', 'KidsController::index');
-$routes->get('/kids/(:any)', 'KidsController::view/$1');
-$routes->get('/experts/home', 'ExpertController::home');
-
-$routes->get('/design/(:any)', 'DesignController::view/$1');
-
-$routes->get('/test', 'Home::test');
-$routes->get('/getStudents', 'Home::getStudents');
-$routes->get('/getTeacher', 'Home::getTeacher');
-$routes->post('/addStudent', 'Home::addStudent');
-$routes->post('/addTeacher', 'Home::addTeacher');
-
-$routes->get('/test/(:alpha)', 'Home::test/$1');
-$routes->get('/getStudents/(:alpha)', 'Home::getStudents/$1');
 
 
+//Expert routes
+$routes->get('', 'RegistrationController::welcome',['filter'=>'AuthGuard']);
+$routes->get('/experts/(:any)', 'ExpertController::view/$1',['filter'=>'AuthGuard']);
+$routes->get('/experts/(:any)/(:any)', 'ExpertController::view/$1/$2',['filter'=>'AuthGuard']);
+$routes->post('/experts/editStudent/(:num)', 'ExpertController::editStudent/$1',['filter'=>'AuthGuard']);
+$routes->post('/experts/addStudent', 'ExpertController::addStudent',['filter'=>'AuthGuard']);
+$routes->post('/experts/addExercise', 'ExpertController::addExercise',['filter'=>'AuthGuard']);
+$routes->post('/experts/editExercise/(:num)', 'ExpertController::editExercise/$1',['filter'=>'AuthGuard']);
+$routes->post('/experts/editProfile/(:num)', 'ExpertController::editProfile/$1',['filter'=>'AuthGuard']);
 
 
+/// Kids Routes
+$routes->match(['get', 'post'], 'kids/avatar/buy', 'KidsController::view/avatar',['filter'=>'AuthGuard']);
+$routes->match(['get', 'post'], 'kids/feedback/(:any)', 'KidsController::view/feedback/$1',['filter'=>'AuthGuard']);
+$routes->get('/kids/(:any)', 'KidsController::view/$1',['filter'=>'AuthGuard']);
+$routes->get('/kids/(:any)/(:any)', 'KidsController::view/$1/$2',['filter'=>'AuthGuard']);
+$routes->post('/kids/exercise/(:num)', 'KidsController::ex/$1',['filter'=>'AuthGuard']);
+$routes->get('/kids/exercise/(:num)', 'KidsController::exercise/$1',['filter'=>'AuthGuard']);
 
 
+/// LogIn
+$routes->get('/registration/expertLogin', 'RegistrationController::expertLogin');
+$routes->get('/registration/studentLogin', 'RegistrationController::studentLogin');
+$routes->get('/registration/register', 'RegistrationController::register');
+$routes->get('/registration/welcome', 'RegistrationController::welcome');
 
 /*
  * --------------------------------------------------------------------

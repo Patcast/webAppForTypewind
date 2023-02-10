@@ -1,0 +1,109 @@
+.mainContent {
+    position: relative;
+    padding: 2.813rem 0 3.75rem; /*45px 0 60px*/
+}
+
+div.bottomBar a {
+    text-decoration: none;
+}
+
+.button {
+    max-width: 9.375rem; /*150px*/
+}
+
+ul.breadcrumb, h1 {
+    padding-left: 60px;
+}
+
+p {
+    font: var(--bodyText);
+    text-align: left;
+    display: inline-block;
+    line-height: 2.5rem; /*40px*/
+    grid-column: 2;
+    grid-row: 2/span 2;
+    justify-self: left;
+}
+
+h3 {
+    color: var(--secondaryColor);
+    margin-bottom: 0.938rem; /*15px*/
+}
+
+.studentContainer {
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: 25% 70%;
+    grid-template-rows: 7.5rem auto; /*120px*/
+    gap: 3.125rem; /*50px*/
+    justify-items: center;
+    align-items: start;
+}
+
+div.scroller {
+    margin: 1.25rem 1.875rem 0 3.75rem; /*20px 30px 0 60px*/
+    height: 75%;
+}
+
+img.roundProfilePic {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+img.hands {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+p.noteText {
+    line-height: 1.563rem; /*25px*/
+}
+
+div.infoContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding-right: 2.188rem;
+    justify-self: left;
+    grid-column: 2;
+    width: 100%;
+}
+
+div.notes {
+    margin-bottom: 0.938rem;
+}
+
+div.roundProfilePic {
+    margin: auto;
+    height: 8.125rem; /* 130px */
+    width: 8.125rem; /* 130px */
+}
+
+div.roundProfilePic img {
+    height: 3.75rem; /* 60px */
+    width: auto;
+}
+
+span.noNotes {
+    font: var(--bodyText);
+    font-style: italic;
+    color: var(--blueNeutral-light);
+}
+
+@media screen and (max-width: 65.625em) {
+    img.hands, img.roundProfilePic, div.roundProfilePic {
+        display: none;
+    }
+
+    div.studentContainer {
+        grid-template-columns: 100%;
+    }
+
+    div.infoContainer {
+        grid-column: 1;
+    }
+}

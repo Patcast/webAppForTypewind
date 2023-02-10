@@ -1,0 +1,63 @@
+* {
+    zoom: 0.99;
+}
+
+/* Implementation Grid */
+.grid-container_login_child {
+    display: grid;
+    /*grid-template-columns: 3.25fr 3.5fr 3.25fr;*/
+    /*grid-template-rows: 2.5fr 5fr 2.5fr;*/
+    /*width: 100vw;*/
+    height: 100vh;
+    place-items: center;
+
+}
+
+.card_login_child {
+    background-color: var(--beigeNeutral);
+    border-radius: 1.563rem; /* 25px */
+    box-shadow: 0.5rem 0.5rem 1.25rem rgba(30, 41, 41, 0.2); /* 8px 8px 20px */
+
+    /*grid-column: 2  / span 1;*/
+    /*grid-row: 2/span 1;*/
+    /*justify-self: stretch;*/
+    place-self: center;
+    text-align: center;
+    padding: 3.125rem;
+}
+
+div.card_login_child input{
+    width: 18.75rem;
+    margin-bottom: 1.5625rem;
+}
+
+.continue_w_email_button{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+div.continue_w_email_button button{
+    width: 18.75rem;
+}
+
+img.logo {
+    display: block;
+    position: absolute;
+    right: 3.125rem;
+    bottom: 3.125rem;
+}
+
+.centering {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    gap: 1.875rem;
+}
+
+@media screen and (max-height: 40.625rem), screen and (max-width: 62rem) {
+    img.logo {
+        display: none;
+    }
+}
+

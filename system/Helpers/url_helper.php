@@ -49,7 +49,7 @@ if (! function_exists('_get_uri')) {
 
         // Check for an index page
         if ($config->indexPage !== '') {
-            $url .= $config->indexPage;
+            /*$url .= $config->indexPage;*/
 
             // Check if we need a separator
             if ($relativePath !== '' && $relativePath[0] !== '/' && $relativePath[0] !== '?') {
@@ -370,7 +370,7 @@ if (! function_exists('safe_mailto')) {
         // improve obfuscation by eliminating newlines & whitespace
         $cspNonce = csp_script_nonce();
         $cspNonce = $cspNonce ? ' ' . $cspNonce : $cspNonce;
-        $output   = '<script type="text/javascript"' . $cspNonce . '>'
+        $output   = '<script' . $cspNonce . '>'
                 . 'var l=new Array();';
 
         foreach ($x as $i => $value) {

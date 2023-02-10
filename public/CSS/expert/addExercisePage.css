@@ -1,0 +1,92 @@
+.mainContent {
+    position: relative;
+    padding: 2.813rem 0 3.75rem /*45rem 0.60rem;*/
+}
+
+div.bottomBar a {
+    text-decoration: none;
+}
+
+.button {
+    max-width: 9.375rem; /*150px*/
+}
+ul.breadcrumb, h1.headerOne {
+    padding-left: 3.75rem;
+}
+p {
+    font: var(--bodyText);
+    text-align: left;
+    display: grid;
+    line-height: 2.5rem; /*40px*/
+    justify-self: left;
+}
+
+h3 {
+    color: var(--secondaryColor);
+    margin-bottom: 0.938rem; /*15px*/
+}
+
+div.scroller {
+    margin: 1.25rem 1.875rem 0 0; /*20px 30px 0 60px*/
+    height: 75%;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+p.contentText {
+    line-height: 1.563rem; /*25px*/
+}
+div.infoContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-right: 2.188rem;
+    justify-self: left;
+    width: 90%;
+    margin: 1.25rem 1.875rem 0 3.75rem;
+    overflow: auto;
+}
+
+div.content {
+    margin-bottom: 1rem;
+}
+input {
+    margin: 0.313rem 0; /*10px*/
+    width: 30rem;
+}
+label {
+    font: var(--bodyText);
+}
+div.generalContainer{
+    grid-template-rows: 3.125rem 9.375rem auto; /*50px 150px 220px*/
+}
+.general{
+    display: grid;
+    grid-template-columns: 8.75rem min-content;
+    grid-template-rows: auto;
+    justify-items: left;
+    align-items: center;
+}
+
+/* CONTENT */
+
+#content {
+    padding: 1rem; /*16px*/
+    border: 0.125rem solid var(--primaryColor); /*2px*/
+    background-color: var(--beigeNeutral-light);
+    border-radius: 1.25rem; /*20px*/
+    width: 100%;
+    height: fit-content;
+    margin: 0;
+    font: var(--bodyText);
+}
+
+#content:focus {
+    outline: none !important;
+    border: 0.125rem solid var(--accentColor); /*2px*/
+}
+#the-count {
+    float: right;
+    padding: 0.1rem 0 0 0;
+    font: var(--smallText);
+}

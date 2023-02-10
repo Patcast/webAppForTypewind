@@ -1,0 +1,110 @@
+#notes {
+    padding: 1rem; /*16px*/
+    border: 0.125rem solid var(--primaryColor); /*2px*/
+    background-color: var(--beigeNeutral-light);
+    border-radius: 1.25rem; /*20px*/
+    width: 100%;
+    height: fit-content;
+    margin: 0;
+    font: var(--bodyText);
+}
+
+#notes:focus {
+    outline: none !important;
+    border: 0.125rem solid var(--accentColor); /*2px*/
+}
+
+input {
+    margin: 0.313rem 0; /*10px*/
+    width: 15.625rem; /*250px*/
+}
+
+label {
+    font: var(--bodyText);
+}
+
+#gender, #teachers, #handSelection {
+    width: 15.625rem; /*250px*/
+    height: 2.5rem; /* 40px */
+    padding: 0.375rem 0.938rem; /* 6px 15px */
+    border: 0.125rem solid var(--blueNeutral-lightest); /* 2px */
+    border-radius: 1.25rem; /* 20px */
+    font: var(--bodyText);
+    color: var(--blueNeutral-dark);
+    caret-color: var(--blueNeutral-dark);
+    margin: 0.313rem 0; /*5px*/
+
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background: var(--beigeNeutral-light) url("/public/assets/icons/angle-small-down.svg") no-repeat 13.338rem center;
+}
+
+#gender:focus, #teachers:focus, #handSelection:focus {
+    outline: none !important;
+    border: 0.125rem solid var(--accentColor); /* 2px */
+}
+
+div.general {
+    grid-template-rows: 3.125rem 9.375rem auto; /*50px 150px 220px*/
+}
+
+.switch {
+    grid-column: 2;
+    grid-row: 10;
+    margin: 0.469rem 0;
+}
+
+div.generalFields {
+    display: grid;
+    grid-template-columns: 8.75rem min-content;
+    grid-template-rows: auto;
+    justify-items: left;
+    align-items: center;
+    row-gap: 0.25rem
+}
+
+.bottomBar {
+   left: 0;
+}
+
+.buttonPrimary {
+    order: 2;
+}
+
+.buttonSecondary {
+    order: 1;
+}
+
+div.notes label h3 {
+    margin: 0;
+}
+
+.notesExplanation {
+    font: var(--smallText);
+    margin-bottom: 0.938rem;
+    color: var(--blueNeutral-light);
+}
+
+label.explanation {
+    font: var(--smallText);
+    grid-column: 1/span 2;
+    margin-top: 0.25rem;
+    margin-bottom: -0.4rem;
+    color: var(--blueNeutral-light);
+}
+
+@media screen and (max-width: 1050px) {
+    form.studentContainer {
+        grid-template-columns: 100%;
+    }
+
+    div.infoContainer {
+        grid-column: 1;
+    }
+}
+#the-count {
+    float: right;
+    padding: 0.1rem 0 0 0;
+    font: var(--smallText);
+}

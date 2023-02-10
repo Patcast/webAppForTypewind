@@ -8,5 +8,12 @@
       <jdbc-url>jdbc:mysql://localhost:3306/uxDev</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="mysql.studev.groept.be" uuid="a748869a-6b3e-4251-b170-48df9be6c02e">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://mysql.studev.groept.be:3306/a22ux02</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

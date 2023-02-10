@@ -1,0 +1,163 @@
+.mainContent {
+    padding: 2.813rem 1.875rem 3.75rem 3.75rem; /*45px 30px 60px 60px*/
+}
+
+div.bar .addNew{
+    font: var(--navText);
+    text-decoration: none;
+    padding: 0;
+}
+
+div.bar .addNew::before{
+    content: "";
+    background: url("/public/assets/icons/add.svg") no-repeat center;
+    background-size: 2.188rem auto;
+    padding: 1.094rem 0 1.094rem 2.188rem;
+    margin-right: 0.625rem;
+}
+
+div.bar .addNew:hover {
+    color: var(--accentColor);
+    transition-duration: 0.4s;
+}
+
+div.bar {
+    margin: 0.563rem 4.688rem 2.5rem 0; /*9px 75px 40px 0*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+div.rightBar {
+    display: flex;
+    flex-direction: row;
+    gap: 1.875rem;
+    align-items: center;
+}
+
+div.filterContainer {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    grid-column: 3/4;
+    align-items: center;
+    gap: 0.625rem;
+}
+
+ul.studentList {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: min-content;
+    justify-content: center;
+    align-items: start;
+    gap: 3.125rem 3.125rem; /*50px 50px*/
+
+    height: 80%;
+    list-style-type: none;
+    overflow: auto;
+    padding-right: 2.188rem; /*35px*/
+}
+
+li.studentListItem a {
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+li.studentListItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#myInput {
+    background: var(--beigeNeutral-light) url("/public/assets/icons/search.svg") no-repeat 12.125rem center;
+    padding-right: 2.5rem;
+    width: 14.375rem;
+}
+
+#filter {
+    width: fit-content;
+    background-color: inherit;
+    border: none;
+    font: var(--navText);
+    padding-left: 1.563rem;
+
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background: url("/public/assets/icons/angle-small-down.svg") no-repeat left center;
+}
+
+#disableFilter{
+    background: var(--blueNeutral-lightest) url("/public/assets/icons/cross.svg") no-repeat;
+    background-position: 0.375rem center;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 0.625rem;
+    border: none;
+}
+
+#disableFilter:hover {
+    background-color: var(--accentColor);
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+#filter:focus {
+    outline: none;
+}
+
+#filter:hover {
+    color: var(--accentColor);
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+#filter option {
+    background-color: var(--beigeNeutral-light);
+    font: var(--bodyText);
+}
+
+h3 {
+    color: var(--secondaryColor);
+    grid-column: 1/span 6;
+    justify-self: center;
+    padding-top: 7.5rem;
+    font-style: italic;
+}
+
+@media screen and (max-width: 109.375em) {
+    ul.studentList {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 90.625em) {
+    ul.studentList {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 75em) {
+    ul.studentList {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #myInput {
+        display: none;
+    }
+}
+
+@media screen and (max-height: 43.75em) {
+    div.bar {
+        display: none;
+    }
+
+    ul.studentList {
+        margin-top: 1.25rem; /*9px*/
+    }
+}

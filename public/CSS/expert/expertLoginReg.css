@@ -1,0 +1,83 @@
+* {
+    zoom: 0.99;
+}
+
+div.card {
+    color: var(--blueNeutral);
+}
+
+div.card h1 {
+    margin: 1.25rem;
+}
+
+div.card p {
+    font: var(--bodyText);
+    margin: 0.625rem;
+}
+
+div.card input, .button {
+    width: 18.75rem;
+    margin: 1.563rem 0;
+}
+
+div.card input {
+    margin: 0 0 1.25rem;
+}
+
+div.card {
+    background-color: var(--beigeNeutral);
+    padding: 1.25rem 5.625rem 2.188rem;
+    margin: 0 0 1.875rem 0;
+    text-align: center;
+    max-width: 40rem;
+}
+
+div.centering {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+img.logo {
+    display: block;
+    position: absolute;
+    right: 3.125rem;
+    bottom: 3.125rem;
+}
+
+#login {
+    margin-top: 0;
+}
+
+.buttonSecondary {
+    margin-top: 0;
+}
+
+div.card {
+    border: none;
+}
+
+.button {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.errorMessage ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+@media screen and (max-width: 37.5em) {
+    div.card {
+        padding: 0.625rem 3.125rem 1.563rem;
+    }
+}
+
+@media screen and (max-height: 40.625em), screen and (max-width: 62em) {
+    img.logo {
+        display: none;
+    }
+}

@@ -1,49 +1,31 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script  src="<?=base_url()?>/public/js/languageData.js" defer></script>
 
-    <!--NAV BAR LINKS -->
+    <?php
+        if (! empty($cssFiles) && is_array($cssFiles)):
+             foreach ($cssFiles as $ccsFilePath):
+                 $path = base_url('public/CSS/'.$ccsFilePath);
+                 echo PHP_EOL.'<link rel="stylesheet" href='.$path.'>' ;
+             endforeach;
+        endif;
+    ?>
 
-    <!-- Bootstrap CSS CDN -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <!-- jQuery CDN -->
-    <script src="https://code.jquery.com/jquery-1.12.0.min.js" defer></script>
-    <!-- Bootstrap Js CDN -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" defer></script>
-    <!-- sidebar Toggle Js -->
-    <script type="text/javascript" src="<?=base_url()?>/js/sidebarToggle.js" defer></script>
-    <!-- Language switch Js -->
-    <script type="text/javascript" src="<?=base_url()?>/js/languageData.js" defer></script>
-    <!-- Our Custom CSS -->
-    <link rel="stylesheet" href="<?=base_url()?>/CSS/navbar.css">
-    <!--END OF NAV BAR LINKS -->
-    <link rel="stylesheet" href="<?=base_url()?>/CSS/testing/list_of_buttons.css">
-
-    <!--CSS FILES-->
-    <link rel="stylesheet" href="<?=base_url()?>/CSS/main.css">
+    <title>Typewind Online</title>
 </head>
-<body>
-<div class="wrapper">
-    <!-- Sidebar Holder -->
-    <?= $this->include('templates/side_nav_bar') ?>
-    <!-- Page Content Holder -->
-    <div id="content">
-        <button type="button" id="sidebarCollapse" class="navbar-btn">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-
-        <main>
+<body >
+    <div class="grid-container">
+        <div class="leftNavBar">
+            <?= $this->include('templates/side_nav_bar') ?>
+        </div>
+        <div class="mainContent ">
             <?= $this->renderSection('content') ?>
-        </main>
+        </div>
     </div>
-</div>
-
-
 </body>
 </html>

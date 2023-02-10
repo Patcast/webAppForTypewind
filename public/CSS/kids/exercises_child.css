@@ -1,0 +1,94 @@
+.mainContent {
+    padding: 2.813rem 1.875rem 3.75rem 3.75rem; /*45px 30px 60px 60px*/
+}
+h1 {
+    /*margin-bottom: 2.5rem; !*40px*!*/
+    /*margin-bottom: 0.5rem;*/
+}
+.card_and_button{
+    display: flex;
+    flex-direction: column;
+    /*row-gap: 1.875rem; !*30px*!*/
+    height: 100%;
+    overflow: auto;
+    align-items: center;
+    /*padding-right: 2.188rem; !*35px*!*/
+    padding-bottom: 1.875rem; /*30px*/
+}
+div.exerciseContainer {
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.875rem; /*30px*/
+    height: 90%;
+    overflow: auto;
+    align-items: center;
+    padding-right: 2.188rem; /*35px*/
+    padding-bottom: 1.875rem; /*30px*/
+    width: 100%;
+}
+.exerciseContainer{
+    user-select: none;
+}
+.scrollButtons{
+    display: grid;
+    grid-template-columns: 1fr
+}
+
+/*Scroll Buttons*/
+.round {
+    border-radius: 50%;
+    padding: 0.625rem;
+    background-color: transparent;
+    border-color: transparent;
+    /*background-color: var(--beigeNeutral);*/
+    /*border-color: var(--beigeNeutral);*/
+    /*border-width: 0px;*/
+    /*border-style: solid;*/
+
+}
+.button:hover:enabled {
+    /*box-shadow: 4px 4px 8px rgba(30, 41, 41, 0.45); !* --black = rgb(30,41,41)*!*/
+    background-color: var(--beigeNeutral);
+    border-color: var(--secondary-light);
+    border-width: 0.125rem;
+    border-style: solid;
+}
+/* LESSON CARD */
+div.lessonCardChild {
+   /* zoom:90%;
+    -moz-transform:scale(0.96);*/
+    display: grid;
+    /*
+    text-align: center;
+    */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "header header header header";
+    max-width: fit-content;
+    align-items: start;
+    gap: 3.75rem;
+    padding: 1.25rem 2.5rem 2.188rem;
+}
+
+div.lessonCardChild h2 {
+    grid-area: header;
+    width: 100%;
+    text-align: center;
+    color: var(--secondaryColor);
+    margin: 0;
+}
+@media screen and (max-width: 93.75rem) {
+    div.lessonCardChild {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "header header header";
+    }
+
+}
+
+@media screen and (max-width: 78.125rem) {
+    div.lessonCardChild {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "header header";
+    }
+}

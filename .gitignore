@@ -1,2 +1,4 @@
 .env
 app/Config/Database.php
+writable/*
+tests/*
