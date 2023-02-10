@@ -6,5 +6,5 @@ The web-app has exercises that the kids can complete, as well everytime they com
 
 At the moment the web-app is hosted by the University in the following link: https://a22ux02.studev.groept.be/#
 
-* To explore the teacher make your own profile and for the kids use the following email: test@test.com
+* To explore the teacher make your own profile and for the kids use the following email: bob.carter@gmail.com
 
