@@ -1,10 +1,28 @@
-# webAppForTypewind
+# Welcome to the Typewind Web App!
 
-This is a full stack web App that was developed as a demo for Typewind with 4 classmates. Typewind is a non profit in Leuven that helps children with movility and cognitive difficulties to type. 
+This is a fun and engaging full-stack web app developed by a team of students from Leuven in collaboration with Typewind, a non-profit organization that helps children with mobility and cognitive difficulties to learn typing.
 
-The web-app has exercises that the kids can complete, as well everytime they complete an exercise they earn coins that can later be exchange for custom avatars. Furthemore, the professors form typewind can add new exercises. 
+# What is Typewind Web App?
 
-At the moment the web-app is hosted by the University in the following link: https://a22ux02.studev.groept.be/#
+Typewind Web App is a platform designed to help children with disabilities to practice their typing skills. It provides them with a variety of exercises, and as they complete each exercise, they earn coins that can be exchanged for custom avatars.
 
-* To explore the teacher make your own profile and for the kids use the following email: bob.carter@gmail.com
+# How to use it?
+
+The web-app is easy to use. Teachers and students can access it through the University's link: https://a22ux02.studev.groept.be/registration/welcome.
+
+    To explore the teacher mode, simply create your own profile.
+    For students, use the following email: bob.carter@gmail.com
+
+# Features
+
+* Customizable avatars for kids
+* Fun and engaging typing exercises
+* Teachers can add new exercises
+* Built on a robust and reliable software architecture
+
+# Technology Stack
+
+* Backend: PHP using the Code Igniter framework
+* Database: MySQL
+* Frontend: JavaScript, HTML, and CSS
 
